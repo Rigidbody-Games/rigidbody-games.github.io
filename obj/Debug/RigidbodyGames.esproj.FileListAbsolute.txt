@@ -1,1 +1,2 @@
 C:\Projects\RigidbodyGames\obj\Debug\RigidbodyGames.esproj.CoreCompileInputs.cache
+C:\Projects\rigidbody-games.github.io\obj\Debug\RigidbodyGames.esproj.CoreCompileInputs.cache
