@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-100">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,47 +8,9 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #030837;
-      font-family: Arial, sans-serif;
-    }
-
-    .logo {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 2em;
-      color: white;
-    }
-
-    .menu {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      display: flex;
-      gap: 15px;
-    }
-
-      .menu a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-      }
-
-        .menu a:hover {
-          text-decoration: underline;
-        }
-  </style>
 </head>
-<body>
-  <app-root></app-root>
+<body class="d-flex h-100 text-center text-bg-dark" style="background-color: #030837 !important;">
+  <app-root class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  </app-root>
 </body>
 </html>
