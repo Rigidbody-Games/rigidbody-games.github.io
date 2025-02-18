@@ -7,13 +7,17 @@ import { IndexComponent } from './pages/index/index.component';
 import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ImprintComponent } from './pages/imprint/imprint.component';
+import { GamesComponent } from './pages/games/games.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexComponent,
     PrivacyComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    ImprintComponent,
+    GamesComponent
   ],
   imports: [
     BrowserModule,
