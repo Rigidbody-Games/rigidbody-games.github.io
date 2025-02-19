@@ -4,6 +4,7 @@ import { IndexComponent } from './pages/index/index.component';
 import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { ImprintComponent } from './pages/imprint/imprint.component';
 import { GamesComponent } from './pages/games/games.component';
+import { ContactComponent } from './pages/contact/contact.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'privacy', component: PrivacyComponent },
   { path: 'imprint', component: ImprintComponent },
   { path: 'games', component: GamesComponent },
+  { path: 'contact', component: ContactComponent },
   { path: '**', pathMatch: 'full', component: NotfoundComponent },
 ];
 

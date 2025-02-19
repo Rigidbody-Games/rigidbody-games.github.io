@@ -9,6 +9,7 @@ import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ImprintComponent } from './pages/imprint/imprint.component';
 import { GamesComponent } from './pages/games/games.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { GamesComponent } from './pages/games/games.component';
     PrivacyComponent,
     NotfoundComponent,
     ImprintComponent,
-    GamesComponent
+    GamesComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
