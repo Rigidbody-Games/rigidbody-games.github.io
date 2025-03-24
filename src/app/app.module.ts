@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ImprintComponent } from './pages/imprint/imprint.component';
 import { GamesComponent } from './pages/games/games.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { SpellcasterPrivacyComponent } from './pages/spellcaster-privacy/spellcaster-privacy.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ContactComponent } from './pages/contact/contact.component';
     NotfoundComponent,
     ImprintComponent,
     GamesComponent,
-    ContactComponent
+    ContactComponent,
+    SpellcasterPrivacyComponent
   ],
   imports: [
     BrowserModule,
