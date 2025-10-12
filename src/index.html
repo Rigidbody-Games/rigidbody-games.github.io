@@ -8,22 +8,58 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <!-- TikTok Pixel Code Start -->
-  <script>
-    !function (w, d, t) {
-      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
-    var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
-    ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
 
-
-      ttq.load('D3LPI6JC77U1STIOFRBG');
-      ttq.page();
-    }(window, document, 'ttq');
-  </script>
-  <!-- TikTok Pixel Code End -->
 </head>
 <body class="d-flex h-100 text-center text-bg-dark" style="background-color: #030837 !important;">
   <app-root class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   </app-root>
+  <div id="cookie-banner" style="position:fixed;bottom:0;left:0;right:0;background:#111;color:#fff;padding:1em;text-align:center;z-index:1000;">
+    This website uses cookies for TikTok analytics and advertising.
+    <button class="btn btn-sm btn-success" id="accept-cookies" style="margin-left:1em;">Accept</button>
+    <button class="btn btn-sm btn-danger" id="reject-cookies">Reject</button>
+  </div>
+
+  <script>
+
+    const banner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('accept-cookies');
+    const rejectBtn = document.getElementById('reject-cookies');
+
+    // Check previous choice
+    const consent = localStorage.getItem('cookieConsent');
+    if (consent === 'accepted') {
+      loadTikTokPixel();
+      banner.style.display = 'none';
+    } else if (consent === 'rejected') {
+      banner.style.display = 'none';
+    }
+
+    acceptBtn.onclick = () => {
+      localStorage.setItem('cookieConsent', 'accepted');
+      loadTikTokPixel();
+      banner.style.display = 'none';
+    };
+
+    rejectBtn.onclick = () => {
+      localStorage.setItem('cookieConsent', 'rejected');
+      banner.style.display = 'none';
+    };
+
+    function loadTikTokPixel() {
+      !function (w, d, t) {
+        w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || []; ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie", "holdConsent", "revokeConsent", "grantConsent"], ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } }; for (var i = 0; i < ttq.methods.length; i++)ttq.setAndDefer(ttq, ttq.methods[i]); ttq.instance = function (t) {
+          for (
+            var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++)ttq.setAndDefer(e, ttq.methods[n]); return e
+        }, ttq.load = function (e, n) {
+          var r = "https://analytics.tiktok.com/i18n/pixel/events.js", o = n && n.partner; ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = r, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {}; n = document.createElement("script")
+            ; n.type = "text/javascript", n.async = !0, n.src = r + "?sdkid=" + e + "&lib=" + t; e = document.getElementsByTagName("script")[0]; e.parentNode.insertBefore(n, e)
+        };
+
+
+        ttq.load('D3LPI6JC77U1STIOFRBG');
+        ttq.page();
+      }(window, document, 'ttq');
+    }
+  </script>
 </body>
 </html>
