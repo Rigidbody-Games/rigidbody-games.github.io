@@ -6,6 +6,7 @@ import { ImprintComponent } from './pages/imprint/imprint.component';
 import { GamesComponent } from './pages/games/games.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { SpellcasterPrivacyComponent } from './pages/spellcaster-privacy/spellcaster-privacy.component';
+import { SpellcasterTermsOfServiceComponent } from './pages/spellcaster-terms-of-service/spellcaster-terms-of-service.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'games', component: GamesComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'spellcaster-privacy', component: SpellcasterPrivacyComponent },
-  { path: '**', pathMatch: 'full', component: NotfoundComponent },
+  { path: 'spellcaster-terms-of-service', component: SpellcasterTermsOfServiceComponent },
+  { path: '**', pathMatch: 'full', component: NotfoundComponent }
 ];
 
 @NgModule({

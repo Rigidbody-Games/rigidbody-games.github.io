@@ -11,6 +11,7 @@ import { ImprintComponent } from './pages/imprint/imprint.component';
 import { GamesComponent } from './pages/games/games.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { SpellcasterPrivacyComponent } from './pages/spellcaster-privacy/spellcaster-privacy.component';
+import { SpellcasterTermsOfServiceComponent } from './pages/spellcaster-terms-of-service/spellcaster-terms-of-service.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SpellcasterPrivacyComponent } from './pages/spellcaster-privacy/spellca
     ImprintComponent,
     GamesComponent,
     ContactComponent,
-    SpellcasterPrivacyComponent
+    SpellcasterPrivacyComponent,
+    SpellcasterTermsOfServiceComponent
   ],
   imports: [
     BrowserModule,
